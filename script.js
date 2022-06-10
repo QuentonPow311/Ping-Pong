@@ -1,12 +1,18 @@
 //UPDATE LOOP
-import Ball from "./ball.js";
+import Ball from "./ball.js"
 
-const ball = new Ball(document.getElementById("ball"));
+const ball = new Ball(document.getElementById("ball"))
 
+let lastTime
 function update(time){
- console.log(time)
-    window.requestAnimationFrame(update)
+ if (lastTime != null) {
+    const delta = time - lastTime
+//Update Code
+ball.update(delta)
+ }
 
+    lastTime = time
+window.requestAnimationFrame(update)
 }
 
 window.requestAnimationFrame(update)
