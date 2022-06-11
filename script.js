@@ -5,10 +5,12 @@ const ball = new Ball(document.getElementById("ball"))
 
 let lastTime
 function update(time){
- if (lastTime != null) {
-    const delta = time - lastTime
-//Update Code
-ball.update(delta)
+ 
+    if (lastTime != null) {
+   
+        const delta = time - lastTime
+ 
+        ball.update(delta)
  }
 
     lastTime = time
@@ -16,3 +18,11 @@ window.requestAnimationFrame(update)
 }
 
 window.requestAnimationFrame(update)
+
+async function getStuff(){
+ const response = await fetch 
+
+
+
+
+}

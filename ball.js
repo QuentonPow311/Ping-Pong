@@ -1,6 +1,9 @@
+const INTITAL_VELOCITY = .025
+
 export default class Ball{
-    constructor(ballElem){
+    constructor(ballElem) {
         this.ballElem = ballElem
+        this.reset()
     }
 get x(){
 
@@ -20,6 +23,10 @@ get x(){
     this.ballElem.style.setProperty("--y", value)
  }
 
+ rect() {
+     return this.ballElem.getBoundingClient()
+ }
+
  reset( ) {
      this.x = 50
      this.y = 50
@@ -33,13 +40,14 @@ get x(){
             const heading = randomNumberBetween(0, 2 * Math.PI)
      this.direction = { x: Math.cos(heading), y: Math.sin(heading) }
         }
-        console.log(this.direction)
+      this.velocity = INTITAL_VELOCITY
  }
 
 update(delta) {
-  this.x = 5
-  this.y = 15
+  this.x += this.direction.x * this.velocity * delta
+  this.y += this.direction.y * this.velocity * delta
   }
+  
 }
 
 function randomNumberBetween (min, max) {
