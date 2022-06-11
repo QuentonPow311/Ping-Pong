@@ -1,5 +1,5 @@
 //UPDATE LOOP
-import Ball from "./ball.js"
+//import Ball from "./ball.js"
 
 const ball = new Ball(document.getElementById("ball"))
 

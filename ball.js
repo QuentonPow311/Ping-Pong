@@ -24,7 +24,7 @@ get x(){
  }
 
  rect() {
-     return this.ballElem.getBoundingClient()
+     return this.ballElem.getBoundingClientRect()
  }
 
  reset( ) {
@@ -46,7 +46,20 @@ get x(){
 update(delta) {
   this.x += this.direction.x * this.velocity * delta
   this.y += this.direction.y * this.velocity * delta
-  }
+const rect = this.rect() 
+
+if (rect.bottom >= window.innerHeight || rect.top <= 0) {
+    this.direction.y *= -1
+    
+}
+
+if (rect.bottom >= window.innerHeight || rect.top <= 0) {
+    this.direction.x *= -1
+}
+
+
+
+}
   
 }
 
