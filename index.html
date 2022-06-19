@@ -7,6 +7,7 @@
     <title>Ping-Pong</title>
     <link rel="stylesheet" href="style.css">
     <script src ="./script.js" type="module"></script>
+    <link rel="stylesheet" href="game.css" type="text/css">
   
 </head>
 <body>
@@ -20,12 +21,13 @@
   <div class="paddle left" id="player-paddle"></div>
   <div class="paddle right" id="computer-paddle"></div>
 
-<script>
-let counts=setInterval(updated);
-
-
-
-</script>
-   
+  <canvas id="canvas" style="display: none;"></canvas>
+<div id="game-over" style="display:block;">
+<a href="#" onclick="startGame()">StartGame</a>
+</div>
+<div id="game-over" style="display:none;">
+<h1>Game Over</h1> 
+<a href="#" onclick="startGame()">StartGame</a>  
+</div>
 </body>
 </html>

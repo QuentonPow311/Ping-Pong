@@ -1,7 +1,7 @@
 //UPDATE LOOP
 import Ball from "./ball.js"
 import Paddle from "./Paddle.js"
-import Score from "./Score.js"
+//import Score from "./Score.js"
 
 var score= 0;
 
@@ -15,7 +15,7 @@ let lastTime
 function update(time){
   if (lastTime != null) {
    const delta = time - lastTime
-     ball.update(delta, [playerPaddle.rect(),computerPaddle.rect()])
+     //ball.update(delta, [playerPaddle.rect(),computerPaddle.rect()])
        computerPaddle.update(delta, ball.y)
        const hue =  parseFloat(  
     getComputedStyle(document.documentElement).getPropertyValue("--hue")
@@ -62,7 +62,22 @@ document.addEventListener("mousemove", e => {
 })
 window.requestAnimationFrame(update)
 
+function startGame() {
+let startDiv = document.getElementById("start");
+let gameCanvas = document.getElementById("canvas");
+let gameOver = document.getElementById("gameOver");
+startDiv.style.display = "none";
+gameCanvas.style.display = "none";
+gameOver.style.display = "block";
 
+ball.reset();
+player1.reset();
+computer.reset();
+
+clearInterval(loop)
+}
+
+fucntion
 
 
 
