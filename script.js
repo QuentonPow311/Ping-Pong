@@ -1,6 +1,9 @@
 //UPDATE LOOP
 import Ball from "./ball.js"
 import Paddle from "./Paddle.js"
+import Score from "./Score.js"
+
+var score= 0;
 
 const ball = new Ball(document.getElementById("ball"))
 const playerPaddle = new Paddle(document.getElementById("player-paddle"))

@@ -58,6 +58,7 @@
         font-weight: bold;
         font-size: 7vh;
         color: var(--foreground-color);
+        
     
     }
     
@@ -73,4 +74,10 @@
     .score > :first-child {
     text-align: right;
     border-right: .5vh solid var(--foreground-color);
+    }
+
+
+    .scoreboard--name{
+color:whitesmoke;
+font-weight: 3;
     }
