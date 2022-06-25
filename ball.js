@@ -62,7 +62,7 @@ update(delta, paddleRects) {
  } 
 
 function randomNumberBetween (min, max) {
-    return Math.random() * (max- min) + min
+    return Math.random() * (max - min) + min
 }
 
 function isCollision(rect1, rect2) {
