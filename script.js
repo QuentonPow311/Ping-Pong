@@ -1,7 +1,4 @@
 //UPDATE LOOP
-// import Ball from "./ball.js"
-// import Paddle from "./Paddle.js"
-// //import Score from "./Score.js"
 
 import Ball from "./ball.js"
 import Paddle from "./Paddle.js"
@@ -14,16 +11,17 @@ const computerScoreElem = document.getElementById("computer-score")
 
 
 
-let lastTime
+
+let lastTime;
 function update(time) {
     //console.log(time)
     if(lastTime != null) { 
         const delta = time - lastTime
-        
+ 
         ball.update(delta, [playerPaddle.rect(), computerPaddle.rect()])
         computerPaddle.update(delta, ball.y)
 
-        if(isLose()) handleLose()
+        if(isLose()) handleLose();
     }
 
     lastTime = time
@@ -56,10 +54,7 @@ function handleLose() {
 computerPaddle.reset()
 }
 
-
-
-
-
+ 
 document.addEventListener("mousemove", e => {
     playerPaddle.position = (e.y / window.innerHeight) * 100 // Converting to %
 })
