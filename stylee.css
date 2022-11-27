@@ -43,7 +43,7 @@
         
     
         position: absolute;
-        background-color:  var(--foreground-color);
+        background-color:  green;
         left: calc(var(--x)* 1vh);
         top: calc(var(--y)* 1vh);;
         transform: translate(-50%, -50%);

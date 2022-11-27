@@ -1,0 +1,32 @@
+header {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+header button {
+  background: green;
+}
+header button:hover {
+  background: rgb(220, 195, 252);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .ball {
+  background-color: rgb(78, 78, 132);
+}
+body .paddle {
+  background-color: rgb(0, 255, 102);
+}
+body .div {
+  background-color: orange;
+}
+
+.contact {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}/*# sourceMappingURL=style.css.map */

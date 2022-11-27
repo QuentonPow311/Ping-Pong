@@ -1,0 +1,21 @@
+@mixin flexLeft {
+ display: flex;
+    justify-content: left;
+    align-items: left;
+
+}
+
+
+header {
+
+    @include flexLeft();
+
+   
+    button {
+    background: $primaryBtn ;
+    &:hover {
+        background: rgb(220, 195, 252);
+    }
+
+}
+}

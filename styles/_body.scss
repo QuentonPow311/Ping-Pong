@@ -1,0 +1,26 @@
+@mixin flexCenter () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+
+body {
+   
+
+    @include flexCenter();
+     
+    .ball{
+        background-color: $ballColor;
+    }
+  .paddle{
+    background-color: $paddleColor1;
+        }
+
+        .div {
+            background-color: orange;
+        }
+        
+}

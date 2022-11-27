@@ -1,0 +1,11 @@
+@import "./variables";
+@import "./header";
+@import "./body";
+
+
+.contact {
+    @include flexLeft();
+ 
+}
+
+
